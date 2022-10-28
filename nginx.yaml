@@ -22,13 +22,16 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  labels:
+    app: nginx-1
   name: nginx-service
+  namespace: default
 spec:
-  selector:
-    app: "nginx-1"
   ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 8080
-      nodePort: 30541
+  - nodePort: 31981
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: nginx-1
   type: LoadBalancer
