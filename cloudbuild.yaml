@@ -5,4 +5,4 @@ steps:
   - run
   - --filename=nginx.yaml
   - --location=us-central1-c
-  - --cluster=cicd-cluster
+  - --cluster=lackofeverything
